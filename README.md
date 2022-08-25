@@ -4,10 +4,15 @@ generating hybrid connectivity via a maximum entropy model unifying structure an
 Instructions to follow...
 
 FSE - compute function by structure embedding based on constrained pseudolikelihood estimation
+
 pseudo - computing constrained pseudolikelihood estimation
+
 ising - simulating ising model using the RSSC (resting state hybrid connectome)
+
 rssc - generate a hybrid connectome
+
 optimum - script to evaluate optimal parameters for hybrid connectome generation
+
 lambda_beta_values - list of paramter values to test
 
 

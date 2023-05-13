@@ -26,7 +26,7 @@ N=size(FC,1); % number of regions
 
 normJ = J;
 normJ(isnan(normJ))=0;
-temp = 0.2:0.2:3;
+temp = 0.4:0.2:2.6;
 %temp = 1:1:10;
 %the key is to capture where the maximum happens without increasing run time too much
 

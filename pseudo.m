@@ -26,3 +26,5 @@ if(t>1 && corr2(J,J-dt*LdJ-(dt.*lambda.*(J-(sign(J).*SC))))== 1)
 end
 
 end
+
+

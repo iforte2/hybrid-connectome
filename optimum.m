@@ -5,7 +5,7 @@
 %236x80 time series takes about 215 seconds to run with 144 combinations of
 %parameter values
 
-function [comp,SC_opt,FC_opt,beta_sim,optimal] = optimum(SC,series,lambd_beta,ts_sz)
+function [comp,SC_opt,FC_opt,beta_sim,optimal] = optimum(SC,ts_sz,lambd_beta)
 %ts_sz = [number of time_points, number of ROIs) per subject; 
 SC_comp = [];%similarity with SC
 FC_comp = [];%FC reconstruction quality
@@ -23,8 +23,8 @@ sims = 2000;
         rowcol = ts_sz(:,:,z);
         row = rowcol(1);
         col = rowcol(2);
-        ts = series(1:row,1:col,z);
-        time_series1 = ts;
+        %ts = series(1:row,1:col,z);
+        time_series1 = ts_sz;
         FC = corrcoef(time_series1);
         FC1 = FC-diag(diag(FC));
         %for each subject, build grid search

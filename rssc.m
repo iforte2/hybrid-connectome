@@ -10,18 +10,18 @@
 %(sum(sum(SC));
 
 function [rs_SC,comp,SC_opt,FC_opt,beta_sim,optimal] = rssc(SC,series,lambd_beta)
-tic
+%tic
 [comp,SC_opt,FC_opt,beta_sim,optimal] = optimum(SC,series,lambd_beta);
-toc
+%toc
 
 %create optimal rs-SC
 for j = 1:size(SC,3)
-        tic
+        %tic
 k = optimal(j);% k gets the index
 lam = lambd_beta(k,1);
 bet = lambd_beta(k,2);
 
 rs_SC(:,:,j) = FSE(SC(:,:,j),series(:,:,j),lam,bet);
-toc
+%toc
 
 end
